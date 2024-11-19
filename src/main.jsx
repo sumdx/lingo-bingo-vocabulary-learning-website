@@ -1,62 +1,67 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Home from './pages/Home.jsx';
-import ErrorPage from './pages/ErrorPage.jsx';
-import Root from './pages/Root.jsx';
-import StartLearning from './pages/StartLearning.jsx';
-import Tutorials from './pages/Tutorials.jsx';
-import About from './pages/About.jsx';
-import MyProfile from './pages/MyProfile.jsx';
-import Login from './pages/Login.jsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
+import Root from "./pages/Root.jsx";
+import StartLearning from "./pages/StartLearning.jsx";
+import Tutorials from "./pages/Tutorials.jsx";
+import About from "./pages/About.jsx";
+import MyProfile from "./pages/MyProfile.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import AuthProvider from "./providers/AuthProvider.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children : [
+    children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: "/start-learning",
-        element: <StartLearning></StartLearning>
+        element: <StartLearning></StartLearning>,
       },
       {
         path: "/tutorials",
-        element: <Tutorials></Tutorials>
+        element: <Tutorials></Tutorials>,
       },
       {
         path: "/about",
-        element: <About></About>
+        element: <About></About>,
       },
       {
         path: "/my-profile",
-        element: <MyProfile></MyProfile>
+        element: <MyProfile></MyProfile>,
       },
       {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
       },
-    ]
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/forgot-password",
+        element: <Register></Register>,
+      },
+    ],
   },
   {
     path: "/*",
-    element: <ErrorPage></ErrorPage>
-  }
+    element: <ErrorPage></ErrorPage>,
+  },
 ]);
 
-
-createRoot(document.getElementById('root')).render(
-
-
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-
-    <RouterProvider router={router} />
-  </StrictMode>,
-)
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  </StrictMode>
+);
