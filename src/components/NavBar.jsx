@@ -1,8 +1,22 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, Navigate, NavLink } from "react-router-dom";
 import Logo from './../assets/Logo (1).png';
+import { AuthContext } from "../providers/AuthProvider";
 
 const NavBar = () => {
+
+  const {user,signOutUser} = useContext(AuthContext);
+
+  const signOutHandle =() =>{
+    signOutUser()
+    .then(()=>{
+      
+    })
+    .catch(error => {
+
+    })
+  }
+
   const menuItems = (
     <>
       <li>
@@ -17,9 +31,12 @@ const NavBar = () => {
       <li>
         <NavLink to={"/about"}>About</NavLink>
       </li>
-      <li>
+      {
+        user && <li>
         <NavLink to={"/my-profile"}>My Profile</NavLink>
       </li>
+      }
+      
     </>
   );
   return (
@@ -62,7 +79,17 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-primaryAccent hover:bg-buttonHover text-white"><Link to={"/login"}>Login</Link></a>
+          {
+            user ? 
+            <div className="flex items-center"> 
+              <h1>{user.email}</h1> 
+              <a onClick={signOutHandle} className="btn bg-primaryAccent hover:bg-buttonHover text-white"><Link >Logout</Link></a> 
+            </div>
+            :
+             
+             <a className="btn bg-primaryAccent hover:bg-buttonHover text-white"><Link to={"/login"}>Login</Link></a> 
+          }
+          
         </div>
       </div>
     </div>

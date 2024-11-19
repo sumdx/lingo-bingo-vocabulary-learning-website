@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import RegisterBgImg from "./../assets/register.svg";
 import Logo from "./../assets/Logo (1).png";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Register = () => {
+
+    const {createUser} = useContext(AuthContext);
+
   const registerHandle = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -11,6 +15,15 @@ const Register = () => {
     const name = e.target.name.value;
     const photoUrl = e.target.photoUrl.value;
     console.log(email, password,name, photoUrl);
+
+    createUser(email,password)
+    .then(result =>{
+        console.log(result)
+    })
+    .catch(error =>{
+        console.log("Error",error.message)
+    })
+
   };
 
   return (

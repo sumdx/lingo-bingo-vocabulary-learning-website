@@ -13,10 +13,12 @@ import MyProfile from "./pages/MyProfile.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -36,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/my-profile",
-        element: <MyProfile></MyProfile>,
+        element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute> ,
       },
       {
         path: "/login",
@@ -51,11 +53,7 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
     ],
-  },
-  {
-    path: "/*",
-    element: <ErrorPage></ErrorPage>,
-  },
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(
