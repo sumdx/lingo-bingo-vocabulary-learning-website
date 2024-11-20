@@ -17,6 +17,7 @@ export default {
         primaryAccent: '#5865F2', // Bright blue
         cardBg: '#FFFFFF', // Pure white
         highlightText: '#30C39E', // Soft teal
+        buttonBgClr: 'rgba(88, 101, 242, 0.05)',
 
         // Typography Colors
         heading: '#1E293B', // Dark slate gray
@@ -34,7 +35,7 @@ export default {
         gradientEnd: '#819CFF', // Ending color for gradients
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(176.66deg, rgb(129, 156, 255) 19.393%, rgb(88, 101, 242) 72.498%)',
+        'custom-gradient': 'linear-gradient(190deg, rgb(129, 156, 255) 15%, rgb(88, 101, 242) 72.498%)',
       },
     },
   },

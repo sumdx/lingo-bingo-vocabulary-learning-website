@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import LoginImgBg from "./../assets/login.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "./../assets/Logo (1).png";
 import { AuthContext } from "../providers/AuthProvider";
 
@@ -8,7 +8,8 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
     
-    const {signInUser} = useContext(AuthContext);
+    const {signInUser,signInWithGoogle} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const loginHandle = e =>{
         e.preventDefault();
@@ -17,9 +18,19 @@ const Login = () => {
         signInUser(email,password)
         .then(result =>{
             e.target.reset();
+            navigate("/");
         })
         .catch(error => {
-            
+
+        })
+    }
+    const googleSignInHandle =() =>{
+        signInWithGoogle()
+        .then(result =>{
+            navigate("/");
+        })
+        .catch(error => {
+
         })
     }
     
@@ -72,7 +83,7 @@ const Login = () => {
                 </button>
               </div>
             </form>
-            <button className="w-full btn mt-4 btn-primary rounded-full cursor-pointer">
+            <button onClick={googleSignInHandle} className="w-full btn mt-4 btn-primary rounded-full cursor-pointer">
                   Login with Google
             </button>
             </div>

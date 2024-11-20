@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import RegisterBgImg from "./../assets/register.svg";
 import Logo from "./../assets/Logo (1).png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Register = () => {
 
     const {createUser} = useContext(AuthContext);
+    const navigate = useNavigate();
 
   const registerHandle = (e) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ const Register = () => {
 
     createUser(email,password)
     .then(result =>{
-        console.log(result)
+        navigate("/");
     })
     .catch(error =>{
         console.log("Error",error.message)
