@@ -1,8 +1,10 @@
 import { updateProfile } from "firebase/auth";
 import React from "react";
 import { auth } from "../firebase/firebase.init";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const UpdateProfile = () => {
+  const navigate = useNavigate();
 
     const updateProfileHandle = (e) =>{
         e.preventDefault();
@@ -14,7 +16,7 @@ const UpdateProfile = () => {
         }
         updateProfile(auth.currentUser,profile)
         .then(result =>{
-           
+           navigate("/my-profile")
         })
         .catch(error =>{
             

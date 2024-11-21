@@ -16,6 +16,7 @@ import AuthProvider from "./providers/AuthProvider.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import Lessons from "./pages/Lessons.jsx";
 import UpdateProfile from "./pages/UpdateProfile.jsx";
+import { ToastContainer } from "react-toastify";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/tutorials",
-        element: <Tutorials></Tutorials>,
+        element:<PrivateRoute><Tutorials></Tutorials></PrivateRoute> ,
       },
       {
         path: "/about",
@@ -71,7 +72,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
+
       <RouterProvider router={router} />
+      
     </AuthProvider>
   </StrictMode>
 );

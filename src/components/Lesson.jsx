@@ -1,8 +1,9 @@
 import React from "react";
 import "./../Css/Lesson.css";
+import { Link } from "react-router-dom";
 
 const Lesson = ({ word }) => {
-    // console.log(word)
+
     const speakWord = new SpeechSynthesisUtterance(word.word)
     speakWord.lang = 'ja-JP'
     const speak =()=>window.speechSynthesis.speak(speakWord)
@@ -31,9 +32,7 @@ const Lesson = ({ word }) => {
     </div>
     <div>
       <dialog id={`my_modal_${word.id}`} className="modal">
-        {
-            console.log(word)
-        }
+        
         <div
           className={`${word.difficulty} gap-2 modal-box flex flex-col justify-center items-center text-center`}
         >
@@ -61,6 +60,7 @@ const Lesson = ({ word }) => {
           </div>
         </div>
       </dialog>
+      
     </div>
     </div>
     

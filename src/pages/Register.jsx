@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import RegisterBgImg from "./../assets/register.svg";
 import Logo from "./../assets/Logo (1).png";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,11 +8,24 @@ import { auth } from "../firebase/firebase.init";
 
 const Register = () => {
 
-    const {createUser,user} = useContext(AuthContext);
+    const {createUser,user,signInWithGoogle} = useContext(AuthContext);
     const navigate = useNavigate();
+    const [error, seterror] = useState(null);
+    const from =location.state?.from?.pathname || '/';
+
     if(user){
       return navigate("/")
     }
+
+    const googleSignInHandle =() =>{
+      signInWithGoogle()
+      .then(result =>{
+        navigate(from,{replace:true});
+      })
+      .catch((error) => {
+          
+      })
+  }
 
     const registerHandle = (e) => {
     e.preventDefault();
@@ -20,7 +33,13 @@ const Register = () => {
     const password = e.target.password.value;
     const name = e.target.name.value;
     const photoUrl = e.target.photoUrl.value;
-    console.log(email, password,name, photoUrl);
+
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+
+    if(!passwordRegex.test(password)){
+      seterror("Password Must have an Uppercase and Lowercase letter in the password, Length must be at least 6 character");
+      return;
+    }
 
     createUser(email,password)
     .then(result =>{
@@ -31,12 +50,12 @@ const Register = () => {
         }
         updateProfile(auth.currentUser,profile)
         .then(() =>{
-          console.log("Successfulll",auth.currentUser)
+          seterror(null)
         })
-        .catch((error) => console.log("Error= ",error))
+        .catch((error))
     })
     .catch(error =>{
-        console.log("Error",error.message)
+
     })
 
   };
@@ -101,13 +120,14 @@ const Register = () => {
                 />
                 
               </div>
+              <p className="text-red-500">{error}</p>
               <div className="form-control mt-6 gap-y-4">
                 <button className="btn btn-primary rounded-full cursor-pointer">
                   Register
                 </button>
               </div>
             </form>
-            <button className="w-full btn mt-4 btn-primary rounded-full cursor-pointer">
+            <button onClick={googleSignInHandle} className="w-full btn mt-4 btn-primary rounded-full cursor-pointer">
               Login with Google
             </button>
           </div>

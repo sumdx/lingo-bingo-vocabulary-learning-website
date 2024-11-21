@@ -64,23 +64,10 @@ const Lessons = () => {
           }
         })}
       </div>
-
-      <div className="container mx-auto">
-        <div className="w-full bg-custom-gradient text-center h-20 items-center flex justify-center">
-          <p className="text-white">Tutorial</p>
-        </div>
-        <div className="flex justify-around p-4 rounded-2xl">
-
-        <ReactPlayer
-        light={true}
-        playing={true}
-         url={'https://www.youtube.com/embed/wDpsF90DoeI?si=Rpb3QYDWR7Ehglq4'}
-         />
-
-        </div>
-        <Link to={"/tutorials"}><a className="btn bg-primaryAccent hover:bg-buttonHover text-white">View More</a> </Link>
-        
+      <div className="text-center">
+      <Link to={"/start-learning"}><a className="btn bg-primaryAccent hover:bg-buttonHover text-white">Back to lessons</a> </Link>
       </div>
+      
     </div>
   );
 };
