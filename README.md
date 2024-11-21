@@ -1,8 +1,10 @@
-# React + Vite
+# Lingo Bingo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It is Japanesse Vocubulary Learning app, where people can learn Japanesse words through some good and organized lesson.
 
-Currently, two official plugins are available:
+* Used Npm libraries :
+- react-countup
+- react-responsive-carousel
+- react-router-dom
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Live link : https://lingo-bingo-7.web.app/
