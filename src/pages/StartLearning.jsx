@@ -28,7 +28,7 @@ const StartLearning = () => {
         <div className="my-6 text-primaryAccent">
           <h1>Lessons</h1>
         </div>
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {lessons.map((lesson) => {
             return (
               <Link to={`/lessons/${lesson}`}>
@@ -47,7 +47,7 @@ const StartLearning = () => {
         <div className="py-10 text-center bg-custom-gradient my-12 rounded-xl text-white">
           <h1>Tutorial</h1>
         </div>
-        <div className="justify-center flex gap-6 mb-10">
+        <div className="justify-center md:flex gap-6 mb-10">
           <iframe
             width="560"
             height="315"
