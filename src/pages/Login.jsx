@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import LoginImgBg from "./../assets/login.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "./../assets/Logo (1).png";
 import { AuthContext } from "../providers/AuthProvider";
 
@@ -10,6 +10,9 @@ const Login = () => {
     
     const {signInUser,signInWithGoogle} = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from =location.state?.from?.pathname || '/';
 
     const loginHandle = e =>{
         e.preventDefault();
@@ -18,7 +21,8 @@ const Login = () => {
         signInUser(email,password)
         .then(result =>{
             e.target.reset();
-            navigate("/");
+            navigate(from,{replace:true});
+            //navigate("/");
         })
         .catch(error => {
 
@@ -27,7 +31,7 @@ const Login = () => {
     const googleSignInHandle =() =>{
         signInWithGoogle()
         .then(result =>{
-            navigate("/");
+          navigate(from,{replace:true});
         })
         .catch(error => {
 

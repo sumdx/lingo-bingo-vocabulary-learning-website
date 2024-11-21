@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import StartLearningBg from "./../assets/start-learning.svg";
 
 
@@ -31,12 +31,14 @@ const StartLearning = () => {
         <div className="grid grid-cols-4 gap-10">
             {
                 lessons.map(lesson =>{
-                    return <div className="bg-primaryAccent rounded-2xl">
-                        <div className="bg-primaryBg m-4 rounded-2xl overflow-hidden ">
+                    return <Link to={`/lessons/${lesson}`}>
+                        <div className="bg-primaryAccent rounded-2xl">
+                        {/* <div className="bg-primaryBg m-4 rounded-2xl overflow-hidden ">
                             <img className=" mx-auto p-4 h-40 object-cover " src={StartLearningBg} alt="" />
-                        </div>
+                        </div> */}
                         <h1 className="text-center text-white font-semibold text-2xl my-4">Lesson : {lesson}</h1>
                     </div>
+                    </Link> 
                 })
             }
         </div>

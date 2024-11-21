@@ -1,0 +1,21 @@
+.hard{
+    background-color: #F8D7DA;
+}
+.medium{
+    background-color: #FFF3CD;
+}
+
+.easy{
+    background-color: #D4EDDA;
+}
+
+.hard-btn{
+    background-color: #D6BCBE;
+}
+.medium-btn{
+    background-color: #DED3B2;
+}
+
+.easy-btn{
+    background-color: #A1C3A9;
+}

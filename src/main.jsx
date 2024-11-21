@@ -14,6 +14,8 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
+import Lessons from "./pages/Lessons.jsx";
+import UpdateProfile from "./pages/UpdateProfile.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,6 +54,15 @@ const router = createBrowserRouter([
       {
         path: "/forgot-password",
         element: <Register></Register>,
+      },
+      {
+        path: "/lessons/:lessonNumber",
+        loader: () => fetch("/data.json"),
+        element:<PrivateRoute><Lessons></Lessons></PrivateRoute> ,
+      },
+      {
+        path: "/update-profile",
+        element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute> ,
       },
     ],
   }

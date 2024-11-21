@@ -16,7 +16,7 @@
         "pronunciation": "sayounara",
         "meaning": "Goodbye",
         "part_of_speech": "Interjection",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 1,
         "when_to_say": "When parting ways",
         "example": "さようなら、またね (Sayounara, mata ne) - Goodbye, see you later."
@@ -27,7 +27,7 @@
         "pronunciation": "arigatou",
         "meaning": "Thank you",
         "part_of_speech": "Expression",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "lesson_no": 1,
         "when_to_say": "When expressing gratitude",
         "example": "ありがとう、助かりました (Arigatou, tasukarimashita) - Thank you, you helped me."
@@ -38,7 +38,7 @@
         "pronunciation": "sumimasen",
         "meaning": "Excuse me / I'm sorry",
         "part_of_speech": "Expression",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 1,
         "when_to_say": "When apologizing or getting someone's attention",
         "example": "すみません、遅れました (Sumimasen, okuremashita) - Excuse me, I am late."
@@ -60,7 +60,7 @@
         "pronunciation": "iie",
         "meaning": "No",
         "part_of_speech": "Interjection",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 1,
         "when_to_say": "When disagreeing or negating",
         "example": "いいえ、そうではありません (Iie, sou de wa arimasen) - No, that's not the case."
@@ -104,7 +104,7 @@
         "pronunciation": "dou itashimashite",
         "meaning": "You're welcome",
         "part_of_speech": "Expression",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "lesson_no": 1,
         "when_to_say": "When responding to 'thank you'",
         "example": "どういたしまして、気にしないでください (Dou itashimashite, ki ni shinaide kudasai) - You're welcome, don't mention it."
@@ -115,7 +115,7 @@
         "pronunciation": "nandesuka",
         "meaning": "What is it?",
         "part_of_speech": "Question",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 2,
         "when_to_say": "When asking about something",
         "example": "それは何ですか？ (Sore wa nandesuka?) - What is that?"
@@ -159,7 +159,7 @@
         "pronunciation": "dare",
         "meaning": "Who",
         "part_of_speech": "Question",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "lesson_no": 2,
         "when_to_say": "When asking about a person",
         "example": "誰が来ますか？ (Dare ga kimasu ka?) - Who is coming?"
@@ -181,7 +181,7 @@
         "pronunciation": "taberu",
         "meaning": "To eat",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 3,
         "when_to_say": "When talking about eating",
         "example": "朝ごはんを食べます (Asagohan o tabemasu) - I eat breakfast."
@@ -225,7 +225,7 @@
         "pronunciation": "hanasu",
         "meaning": "To speak / To talk",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "lesson_no": 3,
         "when_to_say": "When talking about speaking or talking",
         "example": "日本語を話します (Nihongo o hanashimasu) - I speak Japanese."
@@ -269,7 +269,7 @@
         "pronunciation": "taberu",
         "meaning": "To eat",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "lesson_no": 4,
         "when_to_say": "When talking about eating",
         "example": "朝ごはんを食べます (Asagohan o tabemasu) - I eat breakfast."
@@ -291,7 +291,7 @@
         "pronunciation": "miru",
         "meaning": "To see / To look",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 4,
         "when_to_say": "When talking about seeing something",
         "example": "景色を見るのが好きです (Keshiki o miru no ga suki desu) - I like to see the scenery."
@@ -313,7 +313,7 @@
         "pronunciation": "hanasu",
         "meaning": "To speak / To talk",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 4,
         "when_to_say": "When speaking or talking",
         "example": "電話で話します (Denwa de hanashimasu) - I talk on the phone."
@@ -621,7 +621,7 @@
         "pronunciation": "hairu",
         "meaning": "To enter",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 10,
         "when_to_say": "When talking about entering a place",
         "example": "部屋に入ります (Heya ni hairimasu) - I enter the room."
@@ -643,7 +643,7 @@
         "pronunciation": "tobu",
         "meaning": "To fly",
         "part_of_speech": "Verb",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "lesson_no": 10,
         "when_to_say": "When talking about flying",
         "example": "鳥が空を飛びます (Tori ga sora o tobimasu) - The bird flies in the sky."
@@ -687,7 +687,7 @@
         "pronunciation": "kikoeru",
         "meaning": "To be heard / To sound",
         "part_of_speech": "Verb",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "lesson_no": 10,
         "when_to_say": "When talking about something being heard",
         "example": "音が聞こえます (Oto ga kikoemasu) - I can hear the sound."
@@ -742,7 +742,7 @@
         "pronunciation": "matsu",
         "meaning": "To wait",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 10,
         "when_to_say": "When talking about waiting for someone or something",
         "example": "バスを待ちます (Basu o machimasu) - I wait for the bus."
@@ -819,7 +819,7 @@
         "pronunciation": "deru",
         "meaning": "To leave, to exit",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 8,
         "when_to_say": "When talking about leaving a place",
         "example": "家を出ます (Ie o demasu) - I leave the house."
@@ -918,7 +918,7 @@
         "pronunciation": "miru",
         "meaning": "To see, to look at",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 9,
         "when_to_say": "When talking about looking at or observing something",
         "example": "映画を見ます (Eiga o mimasu) - I watch a movie."
@@ -962,7 +962,7 @@
         "pronunciation": "tsukuru",
         "meaning": "To make, to create",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 9,
         "when_to_say": "When talking about making something",
         "example": "料理を作ります (Ryouri o tsukurimasu) - I make food."
@@ -1028,7 +1028,7 @@
         "pronunciation": "matsu",
         "meaning": "To wait",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 9,
         "when_to_say": "When talking about waiting",
         "example": "バスを待ちます (Basu o machimasu) - I wait for the bus."
@@ -1061,7 +1061,7 @@
         "pronunciation": "hairu",
         "meaning": "To enter",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 9,
         "when_to_say": "When entering a place",
         "example": "部屋に入ります (Heya ni hairimasu) - I enter the room."
@@ -1171,7 +1171,7 @@
         "pronunciation": "aruku",
         "meaning": "To walk",
         "part_of_speech": "Verb",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "lesson_no": 9,
         "when_to_say": "When talking about walking",
         "example": "毎日公園を歩きます (Mainichi kōen o arukimasu) - I walk in the park every day."

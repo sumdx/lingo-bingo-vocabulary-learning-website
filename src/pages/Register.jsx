@@ -3,13 +3,18 @@ import RegisterBgImg from "./../assets/register.svg";
 import Logo from "./../assets/Logo (1).png";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import { auth } from "../firebase/firebase.init";
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser,user} = useContext(AuthContext);
     const navigate = useNavigate();
+    if(user){
+      return navigate("/")
+    }
 
-  const registerHandle = (e) => {
+    const registerHandle = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
@@ -19,7 +24,16 @@ const Register = () => {
 
     createUser(email,password)
     .then(result =>{
-        navigate("/");
+        navigate("/login");
+        const profile ={
+          displayName : name,
+          photoURL : photoUrl,
+        }
+        updateProfile(auth.currentUser,profile)
+        .then(() =>{
+          console.log("Successfulll",auth.currentUser)
+        })
+        .catch((error) => console.log("Error= ",error))
     })
     .catch(error =>{
         console.log("Error",error.message)

@@ -25,16 +25,17 @@ const NavBar = () => {
       <li>
         <NavLink to={"/start-learning"} >Start Learning</NavLink>
       </li>
-      <li>
-        <NavLink to={"/tutorials"}>Tutorials</NavLink>
-      </li>
+      
       <li>
         <NavLink to={"/about"}>About</NavLink>
       </li>
       {
-        user && <li>
+        user && <>
+        <li>
+        <NavLink to={"/tutorials"}>Tutorials</NavLink>
+      </li> <li>
         <NavLink to={"/my-profile"}>My Profile</NavLink>
-      </li>
+      </li> </> 
       }
       
     </>
@@ -81,8 +82,8 @@ const NavBar = () => {
         <div className="navbar-end">
           {
             user ? 
-            <div className="flex items-center"> 
-              <h1>{user.email}</h1> 
+            <div className="flex items-center gap-4"> 
+              <h1>Welcome, <span className="font-semibold">{user.displayName.split(" ")[0]}</span> </h1> 
               <a onClick={signOutHandle} className="btn bg-primaryAccent hover:bg-buttonHover text-white"><Link >Logout</Link></a> 
             </div>
             :
