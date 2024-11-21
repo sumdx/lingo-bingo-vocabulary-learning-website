@@ -4,6 +4,7 @@ import AboutUsImg from "./../assets/about-us.svg";
 import CountUp from "react-countup";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { FaCheck } from "react-icons/fa";
 
 import Cover1 from "./../assets/Cover1.jpg";
 import Cover2 from "./../assets/Cover2.jpg";
@@ -31,38 +32,39 @@ const Home = () => {
         >
           <div className="w-full h-[400px] relative">
             <img className="w-full h-[500px] object-cover" src={Cover1} />
-            <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient opacity-50">
-            
-            </div>
+            <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient opacity-50"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl text-center">
-                <h1 className="text-4xl text-white top-1/2">Welcome to Lingo Bingo!</h1>
+              <h1 className="text-4xl text-white top-1/2">
+                Welcome to Lingo Bingo!
+              </h1>
             </div>
           </div>
           <div className="w-full h-[400px] ">
             <img className="w-full h-[500px] object-cover" src={Cover2} />
-            <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient opacity-60">
-            
-            </div>
+            <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient opacity-60"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl text-center">
-                <h1 className="text-4xl text-white top-1/2">Start Your Learning Here with <br />Lingo Bingo</h1>
+              <h1 className="text-4xl text-white top-1/2">
+                Start Your Learning Here with <br />
+                Lingo Bingo
+              </h1>
             </div>
           </div>
           <div className="w-full h-[400px] ">
             <img className="w-full h-[500px] object-cover" src={Cover3} />
-            <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient opacity-50">
-            
-            </div>
+            <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient opacity-50"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl text-center">
-                <h1 className="text-4xl text-white top-1/2">Let's Play and Learn!</h1>
+              <h1 className="text-4xl text-white top-1/2">
+                Let's Play and Learn!
+              </h1>
             </div>
           </div>
           <div className="w-full h-[400px] ">
             <img className="w-full h-[500px] object-cover" src={Cover4} />
-            <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient opacity-70">
-            
-            </div>
+            <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient opacity-70"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl text-center">
-                <h1 className="text-4xl text-white top-1/2">Lingo Bingo – Where Every Word Counts!</h1>
+              <h1 className="text-4xl text-white top-1/2">
+                Lingo Bingo – Where Every Word Counts!
+              </h1>
             </div>
           </div>
         </Carousel>
@@ -70,22 +72,25 @@ const Home = () => {
 
       <div className="container mx-auto">
         {/* About Us */}
-        <div className="md:flex mt-10">
+        <div className="md:flex mt-10 sm:mx-auto">
           <div
             data-aos="fade-right"
-            className="w-1/2 flex flex-col items-start"
+            className=" md:w-1/2 flex flex-col items-start"
           >
             <img className="" src={AboutUsImg} alt="" />
           </div>
-          <div data-aos="fade-left" className="w-1/2 flex flex-col items-end">
-            <h2 className="text-primaryAccent text-right bg-buttonBgClr rounded-2xl px-4 py-2 inline-block">
+          <div
+            data-aos="fade-left"
+            className="md:w-1/2 sm:justify-center flex flex-col md:items-end"
+          >
+            <h2 className="text-primaryAccent sm:text-center sm:mx-auto md:text-right  bg-buttonBgClr rounded-2xl px-4 py-2 inline-block ">
               About Us
             </h2>
-            <h1 className="text-bodyText mt-4 font-medium text-4xl">
+            <h1 className="text-bodyText  sm:text-center mt-4 font-medium text-4xl">
               Welcome to{" "}
               <span className="text-primaryAccent">Lingo Bingo!</span>
             </h1>
-            <p className="text-bodyText text-right w-3/4 mt-4">
+            <p className="text-bodyText sm:text-center md:text-right w-3/4 mt-4">
               At Lingo Bingo, we believe that learning a new language should be
               fun, engaging, and accessible to everyone. Our mission is to
               simplify vocabulary building and help users improve their
@@ -93,7 +98,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-
+        
         <div className="mt-12">
           <div
             data-aos="flip-left"
@@ -143,6 +148,41 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        <div className="text-center mt-12">
+          <h2 className="text-primaryAccent bg-buttonBgClr rounded-2xl px-4 py-2 inline-block">
+            Pricing
+          </h2>
+          <h1 className="text-5xl font-medium mt-6">Simple, Flexible Pricing</h1>
+          <p className="mt-4 font-light">We offer best discounts for students</p>
+          <p className="mt-4 mb-6 font-light text-green-500">Save Upto 50%</p>
+
+          <div   className="flex sm:flex-col md:flex-row justify-evenly gap-10 mb-10">
+            <div data-aos="fade-right" className="bg-primaryAccent text-white text-start p-10 rounded-xl md:w-[400px]">
+              <h3 className="font-semibold">Free</h3>
+              <h3 className="font-light mt-2 mb-10">For Students</h3>
+              <h1 className="text-5xl">$0</h1>
+              <ul className="mt-10 ">
+                <li className="flex items-center gap-2 mb-2"><div className=" bg-white p-1 inline-block rounded-full"><FaCheck className="text-primaryAccent text-xs" /></div> 1 User</li>
+                <li className="flex items-center gap-2 mb-2"><div className=" bg-white p-1 inline-block rounded-full"><FaCheck className="text-primaryAccent text-xs" /></div> Unlimited lesson</li>
+                <li className="flex items-center gap-2 mb-2"><div className=" bg-white p-1 inline-block rounded-full"><FaCheck className="text-primaryAccent text-xs" /></div> 24/7 Support</li>
+              </ul>
+            </div>
+            <div>
+            <div  data-aos="fade-left" className="bg-white border border-gray-400 text-primaryAccent text-start p-10 rounded-xl md:w-[400px]">
+              <h3 className="font-semibold">Advanced</h3>
+              <h3 className="font-light mt-2 mb-10">For Schools</h3>
+              <h1 className="text-5xl">$70</h1>
+              <ul className="mt-10 ">
+                <li className="flex items-center gap-2 mb-2"><div className=" bg-primaryAccent p-1 inline-block rounded-full"><FaCheck className=" text-white text-xs" /></div> Unlimited User</li>
+                <li className="flex items-center gap-2 mb-2"><div className=" bg-primaryAccent p-1 inline-block rounded-full"><FaCheck className="text-white  text-xs" /></div> Unlimited lesson</li>
+                <li className="flex items-center gap-2 mb-2"><div className=" bg-primaryAccent p-1 inline-block rounded-full"><FaCheck className="text-white  text-xs" /></div> 24/7 Support</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

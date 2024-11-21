@@ -47,7 +47,7 @@ const Register = () => {
         <div className="w-3/4 mx-auto my-10 flex flex-col justify-between">
           <div className="text-center items-center flex flex-col">
             <img className="w-10 mb-4" src={Logo} alt="" />
-            <h2>Welcome Back!</h2>
+            <h2>Welcome to Lingo Bingo!</h2>
           </div>
 
           <div>

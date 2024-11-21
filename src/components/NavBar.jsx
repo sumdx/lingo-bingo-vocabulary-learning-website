@@ -88,7 +88,7 @@ const NavBar = () => {
             </div>
             :
              
-             <a className="btn bg-primaryAccent hover:bg-buttonHover text-white"><Link to={"/login"}>Login</Link></a> 
+            <Link className="btn bg-primaryAccent hover:bg-buttonHover text-white" to={"/login"}>Login</Link>
           }
           
         </div>

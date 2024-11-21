@@ -87,13 +87,12 @@ const Login = () => {
                 </button>
               </div>
             </form>
-            <button onClick={googleSignInHandle} className="w-full btn mt-4 btn-primary rounded-full cursor-pointer">
+            <button onClick={googleSignInHandle} className="w-full btn mt-2 btn-primary rounded-full cursor-pointer">
                   Login with Google
             </button>
             </div>
-            <p className="cursor:pointer text-center">
-              <Link to={"/register"}>Don't have account? Sign Up</Link>
-            </p>
+            <Link className="cursor:pointer text-center mt-4" to={"/register"}>Don't have account? Sign Up</Link>
+            
         </div>
       </div>
     </div>
