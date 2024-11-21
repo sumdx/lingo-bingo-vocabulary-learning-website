@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import LoginImgBg from "./../assets/login.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "./../assets/Logo (1).png";
@@ -14,22 +14,23 @@ const Login = () => {
   const { signInUser, signInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const emailRef = useRef();
 
   const from = location.state?.from?.pathname || "/";
 
   const forgtoPassHandle = (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
+    const email = emailRef.current.value;
 
     sendPasswordResetEmail(auth, email)
       .then(() => {
-        // Password reset email sent!
-        // ..
+        alert("Password reset email sent!")
+        
+        window.open("https://mail.google.com", "_blank");
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        seterror(errorMessage)
+
       });
   };
 
@@ -39,15 +40,15 @@ const Login = () => {
     const password = e.target.password.value;
     signInUser(email, password)
       .then((result) => {
-        e.target.reset();
+        
         navigate(from, { replace: true });
         //navigate("/");
       })
       .catch((error) => {
         seterror(error.message);
-        toast.error("🦄 Wow so easy!");
+        
       });
-    toast.warn("No No");
+   
   };
   const googleSignInHandle = () => {
     signInWithGoogle()
@@ -76,6 +77,7 @@ const Login = () => {
                   <span className="label-text">Email</span>
                 </label>
                 <input
+                  ref={emailRef}
                   type="email"
                   placeholder="email"
                   className="input input-bordered"
