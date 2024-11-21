@@ -5,6 +5,7 @@ import CountUp from "react-countup";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { FaCheck } from "react-icons/fa";
+import Head from "./../assets/head.svg"
 
 import Cover1 from "./../assets/Cover1.jpg";
 import Cover2 from "./../assets/Cover2.jpg";
@@ -98,8 +99,8 @@ const Home = () => {
             </p>
           </div>
         </div>
-        
-        <div className="mt-12">
+
+        <div className="mt-32">
           <div
             data-aos="flip-left"
             className="text-center flex flex-col items-center"
@@ -116,9 +117,9 @@ const Home = () => {
           </div>
           <div
             data-aos="fade-zoom-in"
-            className="md:flex justify-between mt-10"
+            className="flex flex-col md:flex-row justify-between mt-10 gap-6"
           >
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center ">
               <div className="flex">
                 <CountUp className="text-5xl" end={300} duration={2} />
                 <h2 className="text-5xl text-primaryAccent">+</h2>
@@ -149,40 +150,104 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-32">
           <h2 className="text-primaryAccent bg-buttonBgClr rounded-2xl px-4 py-2 inline-block">
             Pricing
           </h2>
-          <h1 className="text-5xl font-medium mt-6">Simple, Flexible Pricing</h1>
-          <p className="mt-4 font-light">We offer best discounts for students</p>
+          <h1 className="text-5xl font-medium mt-6">
+            Simple, Flexible Pricing
+          </h1>
+          <p className="mt-4 font-light">
+            We offer best discounts for students
+          </p>
           <p className="mt-4 mb-6 font-light text-green-500">Save Upto 50%</p>
 
-          <div   className="flex sm:flex-col md:flex-row justify-evenly gap-10 mb-10">
-            <div data-aos="fade-right" className="bg-primaryAccent text-white text-start p-10 rounded-xl md:w-[400px]">
+          <div className="flex sm:flex-col md:flex-row justify-evenly gap-10 mb-10">
+            <div
+              data-aos="fade-right"
+              className="bg-primaryAccent text-white text-start p-10 rounded-xl md:w-[400px]"
+            >
               <h3 className="font-semibold">Free</h3>
               <h3 className="font-light mt-2 mb-10">For Students</h3>
               <h1 className="text-5xl">$0</h1>
               <ul className="mt-10 ">
-                <li className="flex items-center gap-2 mb-2"><div className=" bg-white p-1 inline-block rounded-full"><FaCheck className="text-primaryAccent text-xs" /></div> 1 User</li>
-                <li className="flex items-center gap-2 mb-2"><div className=" bg-white p-1 inline-block rounded-full"><FaCheck className="text-primaryAccent text-xs" /></div> Unlimited lesson</li>
-                <li className="flex items-center gap-2 mb-2"><div className=" bg-white p-1 inline-block rounded-full"><FaCheck className="text-primaryAccent text-xs" /></div> 24/7 Support</li>
+                <li className="flex items-center gap-2 mb-2">
+                  <div className=" bg-white p-1 inline-block rounded-full">
+                    <FaCheck className="text-primaryAccent text-xs" />
+                  </div>{" "}
+                  1 User
+                </li>
+                <li className="flex items-center gap-2 mb-2">
+                  <div className=" bg-white p-1 inline-block rounded-full">
+                    <FaCheck className="text-primaryAccent text-xs" />
+                  </div>{" "}
+                  Unlimited lesson
+                </li>
+                <li className="flex items-center gap-2 mb-2">
+                  <div className=" bg-white p-1 inline-block rounded-full">
+                    <FaCheck className="text-primaryAccent text-xs" />
+                  </div>{" "}
+                  24/7 Support
+                </li>
               </ul>
             </div>
             <div>
-            <div  data-aos="fade-left" className="bg-white border border-gray-400 text-primaryAccent text-start p-10 rounded-xl md:w-[400px]">
-              <h3 className="font-semibold">Advanced</h3>
-              <h3 className="font-light mt-2 mb-10">For Schools</h3>
-              <h1 className="text-5xl">$70</h1>
-              <ul className="mt-10 ">
-                <li className="flex items-center gap-2 mb-2"><div className=" bg-primaryAccent p-1 inline-block rounded-full"><FaCheck className=" text-white text-xs" /></div> Unlimited User</li>
-                <li className="flex items-center gap-2 mb-2"><div className=" bg-primaryAccent p-1 inline-block rounded-full"><FaCheck className="text-white  text-xs" /></div> Unlimited lesson</li>
-                <li className="flex items-center gap-2 mb-2"><div className=" bg-primaryAccent p-1 inline-block rounded-full"><FaCheck className="text-white  text-xs" /></div> 24/7 Support</li>
-              </ul>
-            </div>
+              <div
+                data-aos="fade-left"
+                className="bg-white border border-gray-400 text-primaryAccent text-start p-10 rounded-xl md:w-[400px]"
+              >
+                <h3 className="font-semibold">Advanced</h3>
+                <h3 className="font-light mt-2 mb-10">For Schools</h3>
+                <h1 className="text-5xl">$70</h1>
+                <ul className="mt-10 ">
+                  <li className="flex items-center gap-2 mb-2">
+                    <div className=" bg-primaryAccent p-1 inline-block rounded-full">
+                      <FaCheck className=" text-white text-xs" />
+                    </div>{" "}
+                    Unlimited User
+                  </li>
+                  <li className="flex items-center gap-2 mb-2">
+                    <div className=" bg-primaryAccent p-1 inline-block rounded-full">
+                      <FaCheck className="text-white  text-xs" />
+                    </div>{" "}
+                    Unlimited lesson
+                  </li>
+                  <li className="flex items-center gap-2 mb-2">
+                    <div className=" bg-primaryAccent p-1 inline-block rounded-full">
+                      <FaCheck className="text-white  text-xs" />
+                    </div>{" "}
+                    24/7 Support
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
+        <div className="bg-white shadow-md flex p-10 overflow-hidden rounded-xl mt-32 mb-20">
+          <div  data-aos="fade-right" className="w-1/2">
+            <h2 className="text-primaryAccent bg-buttonBgClr rounded-2xl px-4 py-2 inline-block">
+              Testimonial
+            </h2>
+            <h1 className="mt-6 font-semibold text-xl">What people say <br /> about us</h1>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div data-aos="fade-left" className="flex shadow-md items-center gap-2 bg-gray-50 rounded-2xl p-4">
+              <img className="h-12" src={Head} alt="" />
+              <div>
+                <h1 className="text-2xl">Tanjim Hasan Sohan</h1>
+                <p className="text-sm">Best support I got from them</p>
+              </div>
+            </div>
+            <div  data-aos="fade-left" className="flex shadow-md items-center gap-2 bg-gray-50 rounded-2xl p-4">
+              <img className="h-12" src={Head} alt="" />
+              <div>
+                <h1 className="text-2xl">Tanjim Hasan Sohan</h1>
+                <p className="text-sm">Best support I got from them</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
