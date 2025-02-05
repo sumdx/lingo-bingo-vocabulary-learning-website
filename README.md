@@ -18,9 +18,13 @@ It is a Japanese Vocabulary Learning app, where people can learn Japanese words 
 
 ## Features  
 ✅ Users can log in with Google Social. 
+
 ✅ Wide Range of Lessons with subcategories.  
+
 ✅ Video tutorials for the lessons
+
 ✅ Individual cards for every lesson
+
 ✅ Cards with pronunciation sound
 
 
